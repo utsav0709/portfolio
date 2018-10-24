@@ -133,9 +133,6 @@ const textElem = document.querySelectorAll('.text-elem')
         if(isPartiallyVisible(card)) {
           card.classList.add('animated')
           card.classList.add('fadeInUp')
-        } else {
-          card.classList.remove('animated')
-          card.classList.remove('fadeInUp')
         }
       })
     }
