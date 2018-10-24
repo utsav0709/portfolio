@@ -68,7 +68,6 @@ const textElem = document.querySelectorAll('.text-elem')
           }).then(function(result) {
             return new Promise(function(resolve) {
               setTimeout(() => {
-                enable_scroll_mobile()
                 document.body.style.overflow = 'scroll';
                   resolve(1)
               }, 700)
@@ -81,7 +80,6 @@ const textElem = document.querySelectorAll('.text-elem')
     // calling the text animateText
 
     document.addEventListener('DOMContentLoaded', function () {
-      disable_scroll_mobile()
       initialAnimationSequence(heroText)
     })
     // section array
