@@ -4,7 +4,6 @@ const hero = document.querySelector('.hero-container--desktop')
 const heroText = document.getElementById('heroText').firstElementChild;
 const welcomeImg = document.getElementById('welcomeImg');
 const textElem = document.querySelectorAll('.text-elem')
-console.log(textElem);
     // initial animation sequence
     function initialAnimationSequence(textArea) {
       const text = textArea.innerText;
@@ -48,14 +47,12 @@ console.log(textElem);
             }
           }).then(function(result) {
             return new Promise(function(resolve) {
-              console.log('s4 start');
               hero.classList.add('hinge');
               resolve(1);
               })
           }).then(function(result) {
             return new Promise(function(resolve) {
               setTimeout(() => {
-                console.log('s5 start');
                 promiseAnimate({
                   duration: 900,
                   timing: linear,
@@ -70,7 +67,6 @@ console.log(textElem);
             })
           }).then(function(result) {
             return new Promise(function(resolve) {
-              console.log('s6 start');
               setTimeout(() => {
                 enable_scroll_mobile()
                 document.body.style.overflow = 'scroll';
@@ -122,7 +118,6 @@ console.log(textElem);
     // scroll reveal
 
     const cardArr = document.querySelectorAll('.card-reveal')
-    console.log(cardArr);
     let isScrolling = false;
     function throttleScroll(e) {
       if (isScrolling == false) {

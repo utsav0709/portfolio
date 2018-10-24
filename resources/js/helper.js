@@ -64,8 +64,12 @@ function bounce(timeFraction) {
         }
 
         // mobile scroll disabler
-
-        / MOBILE
+        function preventDefault(e) {
+          e = e || window.event;
+          if (e.preventDefault)
+              e.preventDefault();
+          e.returnValue = false;
+        }
 function disable_scroll_mobile(){
   document.addEventListener('touchmove',preventDefault, false);
 }
