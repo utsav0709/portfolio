@@ -62,3 +62,13 @@ function bounce(timeFraction) {
 
           return ((top >= 0) && (bottom <= window.innerHeight));
         }
+
+        // mobile scroll disabler
+
+        / MOBILE
+function disable_scroll_mobile(){
+  document.addEventListener('touchmove',preventDefault, false);
+}
+function enable_scroll_mobile(){
+  document.removeEventListener('touchmove',preventDefault, false);
+}

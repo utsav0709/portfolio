@@ -72,6 +72,7 @@ console.log(textElem);
             return new Promise(function(resolve) {
               console.log('s6 start');
               setTimeout(() => {
+                enable_scroll_mobile()
                 document.body.style.overflow = 'scroll';
                   resolve(1)
               }, 700)
@@ -84,6 +85,7 @@ console.log(textElem);
     // calling the text animateText
 
     document.addEventListener('DOMContentLoaded', function () {
+      disable_scroll_mobile()
       initialAnimationSequence(heroText)
     })
     // section array
