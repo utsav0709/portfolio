@@ -14,7 +14,7 @@ const textElem = document.querySelectorAll('.text-elem')
           duration: 1000,
           timing: linear,
           draw: function(progress) {
-            hero.style.opacity = progress;
+
           }
         }).then(function(result) {
           return new Promise(function(resolve) {
@@ -132,10 +132,10 @@ const textElem = document.querySelectorAll('.text-elem')
       cardArr.forEach(function(card) {
         if(isPartiallyVisible(card)) {
           card.classList.add('animated')
-          card.classList.add('bounceIn')
+          card.classList.add('fadeInUp')
         } else {
           card.classList.remove('animated')
-          card.classList.remove('bounceIn')
+          card.classList.remove('fadeInUp')
         }
       })
     }
